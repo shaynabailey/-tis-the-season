@@ -1,0 +1,91 @@
+/* Apply to all elements */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+/* COLORS and FONTS */
+body {
+    color:white;
+    text-align: center;
+}
+header {
+    height: 100px;
+    background:#4590BF;
+    font-size: 150%;
+    padding-top: 15px;
+    
+}
+main {
+    background:#BDE3F2;
+
+    padding-top: 10px;
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+}
+h2{
+    text-decoration: underline;
+}
+footer {
+    background:#4590BF;
+}
+.right-sidebar {
+    background:#73BCD9;
+    color:white;
+    padding-top: 10px;
+}
+
+/* The links can be represented as a restyled list */
+.holygrail-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+.holygrail-menu a {
+    display: block;
+    padding: 0.4em 0;
+    color: inherit;
+    text-decoration: none;
+    }
+.holygrail-menu a:hover,.holygrail-menu a:focus {
+    padding: 0.4em 1em;
+    background: hsl(0, 0%, 20%);
+    color: white;
+    }
+
+
+/* Can choose to default to cell layout or desktop layout */
+/* default cell layout */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+/* full screen type layout */
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;    
+    } 
+    header, 
+    footer {
+        width: 100%;
+    }
+    main {
+        flex: 2;
+        order: 2;
+        /* vh is viewport height, a screen unit */
+        min-height: 80vh;
+    }
+    
+    .right-sidebar {
+        flex: 1;
+        order: 3;
+    }
+    footer {
+        order: 4;
+    }
+}
